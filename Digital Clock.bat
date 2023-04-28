@@ -1,13 +1,19 @@
 @echo off
-Title Digital Clock
-@mode con cols=30 lines=7
-Color 02
-:Main
+
+set Version=0.0.2
+mode 28,10
+title Clock
+
+:a
 cls
+echo -------------------------
 echo.
-echo Time: %time%
+echo %TIME%
 echo.
-echo Date: %date%
+echo %DATE%
 echo.
-Ping -n 2 0.0.0.0 >NUL
-goto Main
+echo -------------------------
+echo.
+echo   Version: %Version%
+ping localhost -n 2 >NUL
+goto a
